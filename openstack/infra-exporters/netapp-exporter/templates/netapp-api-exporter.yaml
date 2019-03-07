@@ -37,16 +37,16 @@ spec:
       - name: {{ .Values.webapi_exporter.name }} 
         image: {{ .Values.webapi_exporter.image }}
         env:
-          - name: OS_USERNAME
-            valueFrom: 
+          - name: OS_REGION
+            valueFrom:
               configMapKeyRef:
                 name: netapp-etc
-                key: netapp_api_env.username
-          # - name: OS_REGION
-          #   valueFrom:
+                key: region
+          # - name: OS_USERNAME
+          #   valueFrom: 
           #     configMapKeyRef:
           #       name: netapp-etc
-          #       key: netapp_api_env.region
+          #       key: netapp_api_env.username
           # - name: OS_PASSWORD
           #   valueFrom:
           #     configMapKeyRef:
