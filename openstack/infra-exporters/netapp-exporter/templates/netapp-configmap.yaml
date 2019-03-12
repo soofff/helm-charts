@@ -4,9 +4,6 @@ metadata:
   name: netapp-etc
 data:
   region: {{ .Values.global.region }}
-{{/*
-{{ include (print .Template.BasePath "/etc/_netapp_api_env.tpl") . | indent 2 }}
-*/}}
   carbon.conf: |
 {{ include (print .Template.BasePath "/etc/_carbon.conf.tpl") . | indent 4 }}
   storage-schemas.conf: |
