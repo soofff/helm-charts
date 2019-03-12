@@ -1,10 +1,5 @@
 enabled: false
 
-global:
-  netapp_filer:
-      username: dummyuser
-      password: dummypass
-
 harvest:
   name: netapp-harvest
   image:
